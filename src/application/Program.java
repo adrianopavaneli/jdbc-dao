@@ -15,6 +15,8 @@ public class Program {
 		System.out.println("==========Teste1===========");
 		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
+		
+		
 		System.out.println("==========Teste2===========");
 		Department department = new Department(2,null);
 		List<Seller> list = sellerDao.findByDepartment(department);
@@ -22,6 +24,12 @@ public class Program {
 			System.out.println(obj);
 		}
 		
+		System.out.println("==========Teste3===========");
+		
+		list = sellerDao.findAll();
+		for (Seller obj : list) {
+			System.out.println(obj);
+	}
 	}
 
 }
